@@ -5,4 +5,10 @@ Use several different phone numbers to test.
 
 HINT: You can use the keyup event to respond to entered text. There is a CSS Class for red and green.
 */
-
+let regex = /[(]?\d{3}[)]?[-.()]?\d{3}[-.()]?\d{4}/;
+let input = document.querySelector('#phone');
+const handleKey = () => {
+  if (input.value.match(regex)) {
+    input.classList.add('green');
+  }
+};
